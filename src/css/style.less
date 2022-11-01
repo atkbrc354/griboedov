@@ -184,11 +184,7 @@ header {
           margin-right: 294px;
         }
         li {
-          padding-top: 14px;
-          padding-bottom: 14;
-          margin-left: 17px;
-          padding-right: 15px;
-          padding-left: 15;
+          padding: 14px 20px 16px 50px;
           transition: all 300ms ease-in-out;
 
           &:hover {
@@ -1524,6 +1520,154 @@ main {
   footer {
     .wrapper {
       background: @black;
+      .container {
+        .footer-block {
+          display: flex;
+          justify-content: space-between;
+          .footer-left {
+            margin-top: 90px;
+            display: flex;
+            justify-content: space-between;
+            .information {
+              margin-right: 31px;
+              h6.information_title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 29px;
+                color: @white;
+                margin-bottom: 20px;
+              }
+              p.information_description {
+                width: 262px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 23px;
+                color: @white;
+                margin-bottom: 15px;
+              }
+              p.information_description-bottom {
+                width: 262px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 23px;
+                color: @white;
+                margin-bottom: 40px;
+              }
+              .payment {
+                .payment_title {
+                  font-weight: 700;
+                  font-size: 20px;
+                  line-height: 29px;
+                  color: @white;
+                  margin-bottom: 20px;
+                }
+                i.fa-brands {
+                  font-size: 30px;
+                  color: @white;
+                  margin-left: 10px;
+                }
+              }
+            }
+            .support-service {
+              h6.support-service_title {
+                width: 262px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 29px;
+                color: @white;
+                margin-bottom: 20px;
+              }
+              p.support-service_description {
+                width: 262px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 23px;
+                color: @white;
+                margin-bottom: 15px;
+              }
+              p.support-service_description-bottom {
+                width: 262px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 23px;
+                color: @white;
+                margin-bottom: 40px;
+              }
+              .personal-account {
+                h6.personal-account_title {
+                  font-weight: 700;
+                  font-size: 20px;
+                  line-height: 29px;
+                  color: @white;
+                  margin-bottom: 20px;
+                }
+                p.personal-account_description {
+                  width: 262px;
+                  font-weight: 300;
+                  font-size: 16px;
+                  line-height: 23px;
+                  color: @white;
+                  margin-bottom: 15px;
+                }
+                p.personal-account_description-bottom {
+                  width: 262px;
+                  font-weight: 300;
+                  font-size: 16px;
+                  line-height: 23px;
+                  color: @white;
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+          .footer-right {
+            margin-top: 90px;
+            img.map {
+              margin-bottom: 23px;
+            }
+            p.footer-city {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: @white;
+              margin-bottom: 10px;
+            }
+            button.button-city {
+              border: 1px solid @green;
+              background-color: @black;
+              border-radius: 6px;
+              font-weight: 500;
+              padding: 14px 56px 14px 20px;
+              font-size: 10px;
+              line-height: 14px;
+              letter-spacing: 0.05em;
+              text-transform: uppercase;
+              color: @green;
+              margin-bottom: 20px;
+            }
+            p.footer-list {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: @white;
+              margin-bottom: 10px;
+            }
+            button.button-list {
+              border: 1px solid @green;
+              background-color: @black;
+              border-radius: 6px;
+              font-weight: 500;
+              padding: 14px 418px 14px 20px;
+              font-size: 10px;
+              line-height: 14px;
+              letter-spacing: 0.05em;
+              text-transform: uppercase;
+              color: @green;
+              margin-bottom: 100px;
+            }
+          }
+        }
+      }
     }
   }
 }
