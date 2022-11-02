@@ -160,7 +160,7 @@ header .wrapper .header_list ul.list {
   display: flex;
   background-color: #6a0d06;
   width: 80vw;
-  padding-left: 354px;
+  padding-left: 369px;
   margin: 0 auto;
   text-align: center;
   position: absolute;
@@ -171,7 +171,7 @@ header .wrapper .header_list ul.list li.id {
   margin-right: 174px;
 }
 header .wrapper .header_list ul.list li {
-  padding: 14px 20px 16px 50px;
+  padding: 14px 15px 16px 50px;
   transition: all 300ms ease-in-out;
 }
 header .wrapper .header_list ul.list li i.fa-solid {
