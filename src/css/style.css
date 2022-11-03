@@ -756,6 +756,9 @@ main section.often_take .wrapper .container .take-card .take-card_block a.order:
   color: #fff;
   transition: all 300ms ease-in-out;
 }
+main section.often_take .wrapper .container .hidden {
+  display: none;
+}
 main section.often_take .wrapper .container .navigation {
   display: flex;
   justify-content: space-between;
@@ -772,6 +775,22 @@ main section.often_take .wrapper .container .navigation i.fa-sharp {
 main section.often_take .wrapper .container .navigation i.fa-sharp:hover {
   background-color: #4c9601;
   transition: all 300ms ease-in-out;
+}
+main section.often_take .wrapper .container .navigation .navigation-block {
+  display: flex;
+}
+main section.often_take .wrapper .container .navigation .navigation-block span.navigation-circle {
+  display: block;
+  margin-top: 106px;
+  margin-right: 10px;
+  opacity: 0.4;
+  border: 1px solid #6a0d06;
+  border-radius: 20px;
+  width: 10px;
+  height: 10px;
+}
+main section.often_take .wrapper .container .navigation .navigation-block span.active {
+  background: #6a0d06;
 }
 main section.often_take .wrapper .container .navigation i.fa-sharp {
   margin-top: 83px;

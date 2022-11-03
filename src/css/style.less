@@ -214,7 +214,6 @@ header {
             text-decoration: none;
           }
         }
-
       }
     }
   }
@@ -843,6 +842,9 @@ main {
             }
           }
         }
+        .hidden {
+          display: none;
+        }
         .navigation {
           display: flex;
           justify-content: space-between;
@@ -858,6 +860,23 @@ main {
             &:hover {
               background-color: #4c9601;
               transition: all 300ms ease-in-out;
+            }
+          }
+          .navigation-block {
+            display: flex;
+            
+            span.navigation-circle {
+              display: block;
+              margin-top: 106px;
+              margin-right: 10px;
+              opacity: 0.4;
+              border: 1px solid @brown;
+              border-radius: 20px;
+              width: 10px;
+              height: 10px;
+            }
+            span.active {
+              background: @brown;
             }
           }
           i.fa-sharp {
