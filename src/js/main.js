@@ -2,7 +2,11 @@ const slider = document.querySelector("#take-card");
 const sliderItems = Array.from(slider.children);
 const btnleft = document.querySelector('[data-left="icons"]');
 const btnRight = document.querySelector('[data-right="icons"]');
-const navigationCircle = document.querySelector('[data-circle="circle"]');
+const navigationCircle = document.querySelector('#navigation');
+const circleslide = Array.from(navigationCircle.children);
+const navigationActive = document.querySelectorAll('.active');
+
+
 
 sliderItems.forEach(function (slide, index) {
   if (index !== 0) {
@@ -38,46 +42,34 @@ sliderItems.forEach(function (slide, index) {
 });
 
 btnleft.onclick = function () {
-  // скрываем текущий слайд
-  const currentSlide = slider.querySelector("[data-active]");
-  const currentSlideIndex = +currentSlide.dataset.index;
-  currentSlide.classList.add("hidden");
-  currentSlide.removeAttribute("data-active");
-
-  // показываем текущий слайд
-  const nextSlideIndex =
-    currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
-  const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
-  nextSlide.classList.remove("hidden");
-  nextSlide.setAttribute("data-active", "");
+  showNextSlide("next");
 };
 
 btnRight.onclick = function () {
-  // скрываем текущий слайд
-  const currentSlide = slider.querySelector("[data-active]");
-  const currentSlideIndex = +currentSlide.dataset.index;
-  currentSlide.classList.add("hidden");
-  currentSlide.removeAttribute("data-active");
-
-  // показываем текущий слайд
-  const nextSlideIndex =
-    currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
-  const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
-  nextSlide.classList.remove("hidden");
-  nextSlide.setAttribute("data-active", "");
+  showNextSlide("prev");
 };
 
 function showNextSlide(direction) {
+  //скрываем текущий слайд
   const currentSlide = slider.querySelector("[data-active]");
   const currentSlideIndex = +currentSlide.dataset.index;
   currentSlide.classList.add("hidden");
   currentSlide.removeAttribute("data-active");
 
+  // Расчитываем следующий индекст в зависимости от направление движение
+  let nextSlideIndex;
   if (direction === "next") {
-    currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
+    nextSlideIndex =
+      currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
   } else if (direction === "prev") {
-    currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
+    nextSlideIndex =
+      currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
   }
+
+  // показываем следующий слайд
+  const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
+  nextSlide.classList.remove("hidden");
+  nextSlide.setAttribute("data-active", "");
 }
 
 (function () {
